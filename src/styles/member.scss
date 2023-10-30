@@ -1,0 +1,120 @@
+@import "./variables.scss";
+
+.member-page-cont {
+  .heading {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    h2 {
+      color: $dark;
+      margin: 0;
+    }
+
+    .required-text {
+      position: relative;
+      margin-left: 1.5rem;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: $input-form-error;
+
+      &::before {
+        position: absolute;
+        top: -3px;
+        left: -10px;
+        height: 6px;
+        width: 6px;
+        background-color: $input-form-error;
+        border-radius: 50%;
+        display: inline-block;
+        content: "";
+      }
+    }
+  }
+
+  hr {
+    border: 0.7px solid $input-form_default;
+    margin-bottom: 0.8rem;
+  }
+
+  .tab-bar {
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+    color: $input-form-completed;
+
+    .tab {
+      flex: 1;
+      color: $input-form-completed;
+      background-color: $light-3;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+
+      &:first-child {
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+      }
+
+      &:last-child {
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+      }
+    }
+
+    .active-tab {
+      background-color: $primary-main;
+      color: $light;
+    }
+  }
+
+  .members-list {
+    margin-top: 2rem;
+
+    .list-header {
+      .first-section {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        h3 {
+          color: $dark;
+          margin: 0;
+        }
+
+        .sub-line {
+          color: $dark-3;
+          margin-left: 0.75rem;
+          font-size: 14px;
+          font-weight: 500;
+
+          .approval-count {
+            color: $input-form-error;
+            text-decoration: underline;
+          }
+        }
+      }
+
+      hr {
+        margin-top: 0.8rem;
+      }
+
+      .second-section {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .items-selected-count {
+          color: $dark-3;
+          font-size: 0.875rem;
+          font-weight: 500;
+        }
+      }
+    }
+
+    .menu-table-header,
+    .MuiDataGrid-columnHeaderDraggableContainer {
+      background-color: $table-bg;
+    }
+  }
+}
